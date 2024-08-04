@@ -22,6 +22,16 @@ public class Hooks extends DriverSetUp {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.ebay.com");
 	}
+	
+	@BeforeClass
+	public static void setUpBrowserTestNG() {
+		driverUtilities = DriverUtilities.getInstance();
+		driver = driverUtilities.getDriver();
+		js = driverUtilities.getJsExecutor();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.get("https://www.lambdatest.com/selenium-playground/");
+	}
 
 	@AfterAll
 	public static void closeBrowser() {

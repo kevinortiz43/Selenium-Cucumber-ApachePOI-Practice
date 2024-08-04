@@ -1,6 +1,6 @@
 package com.fdmgroup.data;
 
-import org.openqa.selenium.JavascriptExecutor;  
+import org.openqa.selenium.JavascriptExecutor;   
 import org.openqa.selenium.WebDriver;
 
 import com.fdmgroup.util.DriverUtilities;
